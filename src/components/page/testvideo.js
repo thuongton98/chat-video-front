@@ -35,7 +35,7 @@ navigator.mediaDevices.getUserMedia({
         })
     })
 
-    if(socket!==''){
+   
         socket.on('user-connected', userId => {
     
             connectToNewUser(userId, stream)
@@ -49,7 +49,7 @@ navigator.mediaDevices.getUserMedia({
          
          
         })
-    }
+    
 
 })
 .catch((e)=>{
@@ -77,22 +77,22 @@ function connectToNewUser(userId, stream) {
 function addVideoStream(video, stream) {
     
  
-   if(video!==null){
+  
     
        video.srcObject = stream
      video.play()
         
         
       
-   }
+   
    
    
 }
     return(
         <section className="p404">
         <h1>test video</h1>
-        <video className={'video '+classvideo2} autoPlay playsInline ref={ref=>videoz=ref} ></video>
-        <video className={'video '+classvideo1} autoPlay playsInline ref={ref=>videozz=ref}></video>
+        <video className={'video '} autoPlay playsInline ref={ref=>videoz=ref} ></video>
+        <video className={'video '} autoPlay playsInline ref={ref=>videozz=ref}></video>
       </section>
     )
 }
