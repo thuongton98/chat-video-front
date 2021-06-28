@@ -1,0 +1,24 @@
+import React from 'react'
+import { Switch,Route } from 'react-router'
+import home from '../components/page/home'
+import p404 from '../components/page/p404'
+import test from '../components/page/testform'
+import testvideo from '../components/page/testvideo'
+
+function URL(){
+
+    return(
+        <Switch>
+            <Route exact path='/' component={home}/>
+            <Route path='/testform' component={test}/>
+            <Route path='/testvideo' component={testvideo}/>
+
+
+            <Route component={p404}/>
+            
+        </Switch>
+    )
+}
+
+
+export default URL
