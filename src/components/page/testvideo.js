@@ -78,17 +78,12 @@ function addVideoStream(video, stream) {
     
  
    if(video!==null){
-    if ('srcObject' in video) {
+    
        video.srcObject = stream
-      const z = video.play()
-        if(z!==undefined){
-           
-            z.catch(e => {
-               
-              })
-        }
+     video.play()
         
-      } 
+        
+      
    }
    
    
