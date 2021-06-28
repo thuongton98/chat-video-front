@@ -19,7 +19,7 @@ function Video(){
         
     }, [])
     
-    const myPeer = new Peer({host:'thuongchat.tk',secure: true, port:443, path: '/peerjs/myapp'})
+    const myPeer = new Peer({host:'thuongchat.tk', port:443, path: '/peerjs/myapp'})
 navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
@@ -96,8 +96,8 @@ function addVideoStream(video, stream) {
     return(
         <section className="p404">
         <h1>test video</h1>
-        <video className={'video '+classvideo2} controls autoPlay playsInline muted ref={ref=>videoz=ref} ></video>
-        <video className={'video '+classvideo1} controls autoPlay playsInline muted ref={ref=>videozz=ref}></video>
+        <video className={'video '+classvideo2} autoPlay playsInline ref={ref=>videoz=ref} ></video>
+        <video className={'video '+classvideo1} autoPlay playsInline ref={ref=>videozz=ref}></video>
       </section>
     )
 }
