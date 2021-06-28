@@ -21,7 +21,7 @@ function Video(){
     
     const myPeer = new Peer({host:'thuongchat.tk',secure: true, port:443, path: '/peerjs/myapp'})
 navigator.mediaDevices.getUserMedia({
-    video: true,
+    video: false,
     audio: true
 }).then(stream => {
    
