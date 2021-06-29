@@ -3,9 +3,7 @@ import io from 'socket.io-client';
 import {useState,useRef,useEffect} from 'react'
 import ScrollToBottom from 'react-scroll-to-bottom';
 
-//
 const socket= io('https://thuongchat.tk', { transports: ['websocket', 'polling', 'flashsocket'] })
-
 function Home(){
    
    
@@ -44,7 +42,7 @@ function Home(){
         })
    
        
-        
+     
        
     }, [])
 
@@ -75,7 +73,7 @@ function Home(){
     }
 
     function global(e){
-      setroom('')
+        setroom('')
       setstyle(e.target)
       e.target.style.backgroundColor = '#42bcf5'
       e.target.style.borderColor = '#42bcf5'

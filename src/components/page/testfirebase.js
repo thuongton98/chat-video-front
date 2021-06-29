@@ -29,7 +29,7 @@ function Firebase(){
             setTimeout(() => {
               setalert('')
             }, 3000);
-            window.location.scrollTo({
+            window.scrollTo({
               top:0,
               left:0,
               behavior:'smooth'
@@ -103,7 +103,8 @@ function showallmess(e){
 }
     if(firstname!==''){
         return(
-            <section className="chat">
+            <div>
+              <section className="chat">
             <h1>Test Firebase Chat</h1>
             <div className='mess'>{alert}</div>
              {showallmess(allmess)}
@@ -114,10 +115,17 @@ function showallmess(e){
             </form>
             
           </section>
+           <footer>
+           <div className='copyright'>
+                 <p>&copy; <a href='https://www.facebook.com/ton.that.thuong.98'>Thuong</a></p>
+             </div>
+           </footer>
+            </div>
         )
     }
     return(
-        <section className="login">
+        <div>
+          <section className="login">
         <h1>Test Firebase Chat</h1>
          <Formik
        initialValues={{ firstName: '' }}
@@ -150,6 +158,12 @@ function showallmess(e){
        </Form>
      </Formik>
       </section>
+      <footer>
+      <div className='copyright'>
+            <p>&copy; <a href='https://www.facebook.com/ton.that.thuong.98'>Thuong</a></p>
+        </div>
+      </footer>
+        </div>
     )
 }
 
