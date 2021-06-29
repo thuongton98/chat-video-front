@@ -257,13 +257,13 @@ if(ok!==''){
        const find = user.filter(function(value){
            return value.name === username
        })
-      var z = []
+      var k = []
       if(allmess.length>0){
 
         const findmess = allmess.filter(function(value){
             return value.room_id[0] === 'global'
         })
-        z = findmess
+        k = findmess
     }
    
         if(find.length<2){
@@ -271,7 +271,7 @@ if(ok!==''){
              <div onMouseOver={(e)=>hoverchinh(e)} onClick={(e)=>{mouse(e)}}>
              <section className="chat">
          {showuseronline(user)}
-        {showallmess(z)}
+        {showallmess(k)}
          <form onSubmit={(e)=>submitchat(e,'global')}>
            <input ref={ref=>messref=ref} onChange={(e)=>setmess(e.target.value)} type="text" placeholder="type ....." />
            <input  onClick={(e)=>submitchat(e,'global')} className="submit-chat" type="submit" value="Send" />
