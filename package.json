@@ -15,6 +15,7 @@
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^4.3.0",
     "eslint-loader": "^4.0.2",
+    "firebase": "^8.6.8",
     "formik": "^2.2.9",
     "imagemin-gifsicle": "^7.0.0",
     "peer": "^0.6.1",

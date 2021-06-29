@@ -252,7 +252,7 @@ function Home(){
    
 
 if(ok!==''){
-  console.log(user)
+ 
    if(user.length>0){
        const find = user.filter(function(value){
            return value.name === username
