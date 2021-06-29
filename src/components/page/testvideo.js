@@ -47,7 +47,7 @@ navigator.mediaDevices.getUserMedia({
         })
         socket.on('user-disconnected', data=>{
            setclassvideo1('none')
-           setclassvideo2('defalut')
+           setclassvideo2('user')
            videozz.play()
         })
     
@@ -89,8 +89,8 @@ function addVideoStream(video, stream) {
     return(
         <section className="p404">
         <h1>test video</h1>
-        <video className='video' autoPlay playsInline ref={ref=>videoz=ref} ></video>
-        <video className='video' autoPlay playsInline ref={ref=>videozz=ref}></video>
+        <video className={'video '+classvideo1} autoPlay playsInline ref={ref=>videoz=ref} ></video>
+        <video className={'video '+classvideo2} autoPlay playsInline ref={ref=>videozz=ref}></video>
       </section>
     )
 }
