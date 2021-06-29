@@ -12,8 +12,7 @@ function Video(){
     let  ROOM_ID='123123'
     var videoz = useRef('')
     var videozz=useRef('')
-    const [classvideo1,setclassvideo1] = useState('none')
-    const [classvideo2,setclassvideo2] = useState('user')
+
 
    
     
@@ -36,16 +35,13 @@ navigator.mediaDevices.getUserMedia({
    
         socket.on('user-connected', userId => {
            
-            
-            setclassvideo1('user')
-            setclassvideo2('default')
+           
+           
             connectToNewUser(userId, stream)
            
         })
         socket.on('user-disconnected', data=>{
-           setclassvideo1('none')
-           setclassvideo2('user')
-        
+         
         })
     
 
@@ -88,8 +84,8 @@ function addVideoStream(video, stream) {
     return(
         <section className="p404">
         <h1>test video</h1>
-        <video className={'video '+classvideo1} autoPlay playsInline ref={ref=>videoz=ref} ></video>
-        <video className={'video '+classvideo2} autoPlay playsInline ref={ref=>videozz=ref}></video>
+        <video className={'video user'} autoPlay playsInline ref={ref=>videoz=ref} ></video>
+        <video className={'video user'} autoPlay playsInline ref={ref=>videozz=ref}></video>
       </section>
     )
 }
