@@ -3,23 +3,21 @@ import Peer from 'peerjs'
 import io from 'socket.io-client';
 import {useState,useRef,useEffect} from 'react'
 
+const socket= io('https://thuongchat.tk', { transports: ['websocket', 'polling', 'flashsocket'] })
+const myPeer = new Peer({host:'thuongchat.tk', port:443, path: '/peerjs/myapp'})
+
 function Video(){
 
-    const [socket,setsocket] = useState('')
+    
     let  ROOM_ID='123123'
     var videoz = useRef('')
     var videozz=useRef('')
     const [classvideo1,setclassvideo1] = useState('none')
     const [classvideo2,setclassvideo2] = useState('user')
 
-    useEffect(() => {
-        const connect= io('https://thuongchat.tk', { transports: ['websocket', 'polling', 'flashsocket'] })
-        setsocket(connect)
-
-        
-    }, [])
+   
     
-const myPeer = new Peer({host:'thuongchat.tk', port:443, path: '/peerjs/myapp'})
+
 navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
