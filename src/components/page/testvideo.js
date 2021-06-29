@@ -19,7 +19,7 @@ function Video(){
         
     }, [])
     
-    const myPeer = new Peer({host:'thuongchat.tk', port:443, path: '/peerjs/myapp'})
+const myPeer = new Peer({host:'thuongchat.tk', port:443, path: '/peerjs/myapp'})
 navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
@@ -38,21 +38,22 @@ navigator.mediaDevices.getUserMedia({
    
         socket.on('user-connected', userId => {
            
-            connectToNewUser(userId, stream)
-           
             
+            setclassvideo1('user')
+            setclassvideo2('default')
+            connectToNewUser(userId, stream)
+            videoz.play()
+            videozz.play()
         })
         socket.on('user-disconnected', data=>{
-           
-           
-         
+           setclassvideo1('none')
+           setclassvideo2('defalut')
+           videozz.play()
         })
     
 
 })
-.catch((e)=>{
-  
-})
+
 myPeer.on('open', id => {
 const data = {
   ROOM_ID,
@@ -88,8 +89,8 @@ function addVideoStream(video, stream) {
     return(
         <section className="p404">
         <h1>test video</h1>
-        <video className={'video'} autoPlay playsInline ref={ref=>videoz=ref} ></video>
-        <video className={'video'} autoPlay playsInline ref={ref=>videozz=ref}></video>
+        <video className='video' autoPlay playsInline ref={ref=>videoz=ref} ></video>
+        <video className='video' autoPlay playsInline ref={ref=>videozz=ref}></video>
       </section>
     )
 }

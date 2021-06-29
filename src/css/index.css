@@ -232,6 +232,27 @@ footer{
   }
 }
 
-.input-chat{
-  width: 30%!important;
+
+.error{
+ 
+  display: block;
+  color:red;
+  position: absolute;
+  left:90px;
+  top:130px;
+  
 }
+
+.mess{
+  position: absolute;
+  color:#fff;
+  font-size: 20px;
+  text-align: center;
+  background-color: red;
+  width: 20%;
+  margin:0 auto;
+  top:40px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
