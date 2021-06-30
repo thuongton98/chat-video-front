@@ -1,8 +1,8 @@
 import React from 'react'
 import Peer from 'peerjs'
 import io from 'socket.io-client';
-import {useState,useRef,useEffect} from 'react'
-import { Redirect } from 'react-router';
+import {useRef,useEffect} from 'react'
+
 
 const socket= io('http://localhost:5000', { transports: ['websocket', 'polling', 'flashsocket'] })
 const myPeer = new Peer({host:'thuongchat.tk', secure:true, port:443, path: '/peerjs/myapp'})
@@ -34,7 +34,7 @@ useEffect(()=>{
 
 
 navigator.mediaDevices.getUserMedia({
-    video: false,
+    video: true,
     audio: true
 }).then(stream => {
    
