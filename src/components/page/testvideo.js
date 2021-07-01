@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import {useRef,useEffect} from 'react'
 
 
-const socket= io('http://localhost:5000', { transports: ['websocket', 'polling', 'flashsocket'] })
+const socket= io('https://thuongchat.tk', { transports: ['websocket', 'polling', 'flashsocket'] })
 const myPeer = new Peer({host:'thuongchat.tk', secure:true, port:443, path: '/peerjs/myapp'})
 
 function Video(){
